@@ -1,0 +1,19 @@
+{
+  "framework": "nextjs",
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "installCommand": "npm install",
+  "regions": ["cdg1"],
+  "functions": {
+    "src/app/api/webhook/route.js": {
+      "maxDuration": 30
+    },
+    "src/app/api/convention/route.js": {
+      "maxDuration": 30
+    },
+    "src/app/api/upload/route.js": {
+      "maxDuration": 60,
+      "memory": 1024
+    }
+  }
+}
